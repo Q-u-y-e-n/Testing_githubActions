@@ -10,8 +10,7 @@ public class CartTest {
 
     @BeforeMethod
     public void setUp() {
-    	DriverFactory.initDriver("chrome");
-        driver = DriverFactory.getDriver();
+    	driver = DriverFactory.initDriver("chrome");
         driver.get("https://www.google.com"); // Mở Google cho dễ phân biệt
     }
 
@@ -21,11 +20,8 @@ public class CartTest {
     }
 
     @AfterMethod
-    public void tearDown() throws InterruptedException { // Nhớ thêm throws InterruptedException nhé
-        // TẠM THỜI: Dừng luồng này lại 5 giây (5000 milliseconds) để kịp chụp ảnh
-        Thread.sleep(5000); 
-        
-        // Sau 5 giây, trình duyệt mới bị đóng
-        DriverFactory.quitDriver();
+    public void tearDown() throws InterruptedException {
+        Thread.sleep(5000);
+        DriverFactory.quitDriver(driver); // ✅ Truyền driver vào
     }
 }

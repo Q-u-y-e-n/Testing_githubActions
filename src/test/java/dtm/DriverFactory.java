@@ -3,35 +3,58 @@ package dtm;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class DriverFactory {
-    // ThreadLocal: mỗi thread có biến driver riêng biệt
-    private static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
-    public static void initDriver(String browser) {
-        WebDriver driver;
-        switch (browser.toLowerCase()) {
-            case "firefox":
-                WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver(); 
-                break;
-            default:
-                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+    private static final boolean IS_CI = System.getenv("CI") != null;
+
+    public static WebDriver initDriver(String browser) {
+        if (browser == null || browser.trim().isEmpty()) {
+            browser = "chrome";
         }
-        driver.manage().window().maximize();
-        tlDriver.set(driver);
+        if (browser.trim().toLowerCase().equals("firefox")) {
+            return createFirefoxDriver(IS_CI);
+        } else {
+            return createChromeDriver(IS_CI);
+        }
     }
 
-    public static WebDriver getDriver() { 
-        return tlDriver.get(); 
+    public static WebDriver initDriver() {
+        return initDriver("chrome");
     }
 
-    public static void quitDriver() {
-        if (tlDriver.get() != null) {
-            tlDriver.get().quit();
-            tlDriver.remove(); // Rất quan trọng: tránh memory leak
+    private static WebDriver createChromeDriver(boolean headless) {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-gpu");
+
+        if (headless) {
+            options.addArguments("--headless=new");
+            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--remote-allow-origins=*");
+        } else {
+            options.addArguments("--start-maximized");
+        }
+
+        WebDriverManager.chromedriver().setup();
+        return new ChromeDriver(options);
+    }
+
+    private static WebDriver createFirefoxDriver(boolean headless) {
+        FirefoxOptions options = new FirefoxOptions();
+        if (headless) {
+            options.addArguments("-headless");
+        }
+        WebDriverManager.firefoxdriver().setup();
+        return new FirefoxDriver(options);
+    }
+    public static void quitDriver(WebDriver driver) {
+        if (driver != null) {
+            driver.quit();
         }
     }
 }

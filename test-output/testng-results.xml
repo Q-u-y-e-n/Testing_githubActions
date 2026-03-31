@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-31T14:57:57 ICT" name="Default suite" finished-at="2026-03-31T14:58:18 ICT" duration-ms="21580">
+  <suite started-at="2026-03-31T15:10:33 ICT" name="Default suite" finished-at="2026-03-31T15:10:53 ICT" duration-ms="19183">
     <groups>
       <group name="regression">
         <method signature="LoginTest.testLoginSuccess()[pri:0, instance:dtm.LoginTest@2a65fe7c]" name="testLoginSuccess" class="dtm.LoginTest"/>
@@ -12,65 +12,65 @@
         <method signature="LoginTest.testLoginSuccess()[pri:0, instance:dtm.LoginTest@2a65fe7c]" name="testLoginSuccess" class="dtm.LoginTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2026-03-31T14:57:57 ICT" name="Default test" finished-at="2026-03-31T14:58:18 ICT" duration-ms="21580">
+    <test started-at="2026-03-31T15:10:33 ICT" name="Default test" finished-at="2026-03-31T15:10:53 ICT" duration-ms="19183">
       <class name="dtm.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T14:57:57 ICT" name="setUp" finished-at="2026-03-31T14:58:00 ICT" duration-ms="3548" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T15:10:33 ICT" name="setUp" finished-at="2026-03-31T15:10:37 ICT" duration-ms="3800" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testLoginEmptyPassword()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T14:58:00 ICT" name="testLoginEmptyPassword" description="testLoginEmptyPassword: Bỏ trống password" finished-at="2026-03-31T14:58:02 ICT" duration-ms="1269" status="PASS">
+        <test-method signature="testLoginEmptyPassword()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T15:10:37 ICT" name="testLoginEmptyPassword" description="testLoginEmptyPassword: Bỏ trống password" finished-at="2026-03-31T15:10:38 ICT" duration-ms="689" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginEmptyPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T14:58:02 ICT" name="tearDown" finished-at="2026-03-31T14:58:02 ICT" duration-ms="596" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T15:10:38 ICT" name="tearDown" finished-at="2026-03-31T15:10:39 ICT" duration-ms="541" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T14:58:02 ICT" name="setUp" finished-at="2026-03-31T14:58:04 ICT" duration-ms="1906" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T15:10:39 ICT" name="setUp" finished-at="2026-03-31T15:10:41 ICT" duration-ms="2471" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testLoginEmptyUsername()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T14:58:04 ICT" name="testLoginEmptyUsername" description="testLoginEmptyUsername: Bỏ trống username" finished-at="2026-03-31T14:58:06 ICT" duration-ms="1343" status="PASS">
+        <test-method signature="testLoginEmptyUsername()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T15:10:41 ICT" name="testLoginEmptyUsername" description="testLoginEmptyUsername: Bỏ trống username" finished-at="2026-03-31T15:10:42 ICT" duration-ms="619" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginEmptyUsername -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T14:58:06 ICT" name="tearDown" finished-at="2026-03-31T14:58:06 ICT" duration-ms="661" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T15:10:42 ICT" name="tearDown" finished-at="2026-03-31T15:10:42 ICT" duration-ms="697" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T14:58:06 ICT" name="setUp" finished-at="2026-03-31T14:58:08 ICT" duration-ms="2057" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T15:10:42 ICT" name="setUp" finished-at="2026-03-31T15:10:44 ICT" duration-ms="2172" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testLoginLockedUser()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T14:58:08 ICT" name="testLoginLockedUser" description="testLoginLockedUser: Dùng tài khoản bị khóa" finished-at="2026-03-31T14:58:10 ICT" duration-ms="1429" status="PASS">
+        <test-method signature="testLoginLockedUser()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T15:10:44 ICT" name="testLoginLockedUser" description="testLoginLockedUser: Dùng tài khoản bị khóa" finished-at="2026-03-31T15:10:45 ICT" duration-ms="603" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginLockedUser -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T14:58:10 ICT" name="tearDown" finished-at="2026-03-31T14:58:10 ICT" duration-ms="364" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T15:10:45 ICT" name="tearDown" finished-at="2026-03-31T15:10:46 ICT" duration-ms="471" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T14:58:10 ICT" name="setUp" finished-at="2026-03-31T14:58:13 ICT" duration-ms="2678" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T15:10:46 ICT" name="setUp" finished-at="2026-03-31T15:10:47 ICT" duration-ms="1710" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testLoginSuccess()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T14:58:13 ICT" name="testLoginSuccess" description="testLoginSuccess: Nhập user/pass hợp lệ" finished-at="2026-03-31T14:58:14 ICT" duration-ms="1206" status="PASS">
+        <test-method signature="testLoginSuccess()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T15:10:47 ICT" name="testLoginSuccess" description="testLoginSuccess: Nhập user/pass hợp lệ" finished-at="2026-03-31T15:10:49 ICT" duration-ms="1288" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginSuccess -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T14:58:14 ICT" name="tearDown" finished-at="2026-03-31T14:58:15 ICT" duration-ms="642" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T15:10:49 ICT" name="tearDown" finished-at="2026-03-31T15:10:49 ICT" duration-ms="526" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T14:58:15 ICT" name="setUp" finished-at="2026-03-31T14:58:17 ICT" duration-ms="2444" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T15:10:49 ICT" name="setUp" finished-at="2026-03-31T15:10:51 ICT" duration-ms="1746" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testLoginWrongPassword()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T14:58:17 ICT" name="testLoginWrongPassword" description="testLoginWrongPassword: Nhập sai mật khẩu" finished-at="2026-03-31T14:58:18 ICT" duration-ms="828" status="PASS">
+        <test-method signature="testLoginWrongPassword()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T15:10:51 ICT" name="testLoginWrongPassword" description="testLoginWrongPassword: Nhập sai mật khẩu" finished-at="2026-03-31T15:10:52 ICT" duration-ms="1141" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginWrongPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T14:58:18 ICT" name="tearDown" finished-at="2026-03-31T14:58:18 ICT" duration-ms="492" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:dtm.LoginTest@2a65fe7c]" started-at="2026-03-31T15:10:52 ICT" name="tearDown" finished-at="2026-03-31T15:10:53 ICT" duration-ms="593" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
