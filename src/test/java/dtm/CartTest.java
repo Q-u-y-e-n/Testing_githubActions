@@ -10,7 +10,7 @@ public class CartTest {
 
     @BeforeMethod
     public void setUp() {
-        DriverFactory.initDriver("chrome");
+    	DriverFactory.initDriver("chrome");
         driver = DriverFactory.getDriver();
         driver.get("https://www.google.com"); // Mở Google cho dễ phân biệt
     }

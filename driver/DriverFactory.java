@@ -7,16 +7,15 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class DriverFactory {
     
-    public static WebDriver createDriver(String browser) {
-        // GitHub Actions tự động đặt biến môi trường CI=true khi chạy pipeline [cite: 85, 86]
-        boolean isCI = System.getenv("CI") != null; [cite: 86]
+	// Đảm bảo tên hàm trong Test class gọi đúng hàm này
+	public static WebDriver initDriver(String browser) { 
+	    boolean isCI = System.getenv("CI") != null; [cite: 86]
 
-        return switch (browser.toLowerCase()) {
-            case "firefox" -> createFirefoxDriver(isCI); [cite: 87]
-            default -> createChromeDriver(isCI); [cite: 87]
-        };
-    }
-
+	    return switch (browser.toLowerCase()) {
+	        case "firefox" -> createFirefoxDriver(isCI); [cite: 87]
+	        default -> createChromeDriver(isCI); [cite: 87]
+	    };
+	}
     private static WebDriver createChromeDriver(boolean headless) {
         ChromeOptions options = new ChromeOptions(); [cite: 92]
         
