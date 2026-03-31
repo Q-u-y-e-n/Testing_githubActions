@@ -10,7 +10,10 @@ public class CartTest {
 
     @BeforeMethod
     public void setUp() {
-    	driver = DriverFactory.initDriver("chrome");
+    	String browserName = System.getProperty("browser", "chrome");
+        
+        // Khởi tạo trình duyệt dựa trên biến nhận được
+        driver = DriverFactory.initDriver(browserName);
         driver.get("https://www.google.com"); // Mở Google cho dễ phân biệt
     }
 

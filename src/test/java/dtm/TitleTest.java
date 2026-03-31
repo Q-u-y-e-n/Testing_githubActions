@@ -14,7 +14,10 @@ public class TitleTest {
     @BeforeMethod
     public void setUp() {
         // Đồng bộ sử dụng DriverFactory để kế thừa cấu hình CI
-    	driver = DriverFactory.initDriver("chrome");
+    	String browserName = System.getProperty("browser", "chrome");
+        
+        // Khởi tạo trình duyệt dựa trên biến nhận được
+        driver = DriverFactory.initDriver(browserName);
    
         driver.get("https://www.saucedemo.com"); 
     }

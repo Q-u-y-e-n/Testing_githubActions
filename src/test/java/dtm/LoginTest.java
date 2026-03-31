@@ -19,7 +19,10 @@ public class LoginTest {
     @BeforeMethod
     public void setUp() {
         // Gọi DriverFactory để đảm bảo chạy được trên GitHub Actions
-    	driver = DriverFactory.initDriver("chrome");
+    	String browserName = System.getProperty("browser", "chrome");
+        
+        // Khởi tạo trình duyệt dựa trên biến nhận được
+        driver = DriverFactory.initDriver(browserName);
         // Cấu hình Explicit Wait (tối đa 10 giây)
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.get("https://www.saucedemo.com");
