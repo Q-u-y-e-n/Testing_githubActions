@@ -23,7 +23,9 @@ public class DriverFactory {
     }
 
     public static WebDriver initDriver() {
-        return initDriver("chrome");
+        // Đọc -Dbrowser=chrome/firefox từ lệnh mvn
+        String browser = System.getProperty("browser", "chrome");
+        return initDriver(browser);
     }
 
     private static WebDriver createChromeDriver(boolean headless) {

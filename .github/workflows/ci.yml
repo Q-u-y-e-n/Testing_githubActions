@@ -10,10 +10,10 @@ jobs:
   run-tests:
     runs-on: ubuntu-latest
     strategy:
-      [cite_start]fail-fast: false # Chrome fail không dừng Firefox [cite: 145, 147]
+      fail-fast: false
       matrix:
-        [cite_start]browser: [chrome, firefox] # Tạo 2 job chạy song song [cite: 144]
-        
+        browser: [chrome, firefox]
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -25,13 +25,18 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - [cite_start]name: Run Selenium Tests (${{ matrix.browser }}) # [cite: 148]
-        # Lệnh chạy test truyền tham số browser vào Maven [cite: 149]
+      - name: Install Firefox   # ← Thêm bước này cho Firefox
+        if: matrix.browser == 'firefox'
+        run: sudo apt-get install -y firefox
+
+      - name: Run Selenium Tests (${{ matrix.browser }})
         run: mvn test -Dbrowser=${{ matrix.browser }}
-        
+        env:
+          CI: true              # ← Đảm bảo IS_CI = true trong DriverFactory
+
       - name: Lưu kết quả test
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          [cite_start]name: test-results-${{ matrix.browser }} # 2 artifact riêng biệt [cite: 155]
+          name: test-results-${{ matrix.browser }}
           path: target/surefire-reports/
